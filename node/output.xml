@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<record>
+  <ID>1</ID>
+  <FirstName>jonathan</FirstName>
+  <LastName>solis ceballos</LastName>
+  <Age>18</Age>
+  <Email>jsolis9@ucol.mx</Email>
+  <AccountNumber>20157057</AccountNumber>
+</record>
+<record>
+  <ID>2</ID>
+  <FirstName>jorge</FirstName>
+  <LastName>munoz aranda</LastName>
+  <Age>20</Age>
+  <Email>mjorge@ucol.mx</Email>
+  <AccountNumber>20135984</AccountNumber>
+</record>
+<record>
+  <ID>3</ID>
+  <FirstName>sarahi guadalupe</FirstName>
+  <LastName>larios lopez</LastName>
+  <Age>19</Age>
+  <Email>larios@ucol.mx</Email>
+  <AccountNumber>20153412</AccountNumber>
+</record>

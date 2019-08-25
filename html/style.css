@@ -1,0 +1,15 @@
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding:10px;
+}
+
+th{
+  background: #28a745;
+  color:white;
+  /* border: none; */
+}
+table{
+  margin: 0px auto;
+}
