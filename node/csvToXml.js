@@ -1,40 +1,24 @@
-const csvFilePath='sample.csv';
+const csvPath='./input/sample.csv';//The path where the csv file is
+const XMLPath = './output/output.xml';//The path where you want to store the file converted
+
 const csv=require('csvtojson');
 const fs = require('fs');
 var builder = require('xmlbuilder');
 
-const convertFile = async() =>{
+const csvToXML = async(csvPath,whereToSave) =>{
   try{
-    const jsonArray=await csv().fromFile(csvFilePath);
+    const jsonArray=await csv().fromFile(csvPath);
 
     var obj = {
       record : [...jsonArray]
     };
 
     var xml = builder.create(obj, { encoding: 'utf-8' }).end({ pretty: true});
-    console.log(xml);
 
-    fs.writeFile("output.xml", xml, function(err) {
-      if(err) {
-          return console.log(err);
-      }
-      
-      console.log("The xml was saved!");
-  }); 
+    fs.writeFile(whereToSave, xml, (err) => {
+      return err ? console.log(err) : console.log("The XML was saved!");
+    }); 
   }
-  catch(err){
-    console.log(err)
-  }
-  
+  catch(err){ console.log(err) }
 };
-convertFile();
-// var obj = {
-//   data: {
-//     records: {
-//       value: {
-//         '@field': '', // attributes start with @
-//         '#text': '' // text node
-//       }
-//     }
-//   }
-// };
+csvToXML(csvPath,XMLPath);
